@@ -25,10 +25,12 @@
       background-color: var(--cor-fundo);
       background-image: radial-gradient(circle, #2a0044 0%, #0a0a0a 100%);
       color: var(--cor-texto);
+
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100svh; /* melhor que 100vh em celular */
+
+      min-height: 100svh; /* melhor que 100vh no mobile */
       overflow-x: hidden;
       text-align: center;
     }
@@ -51,15 +53,30 @@
       animation: pulse-border 1.5s infinite alternate;
     }
 
+    /* TÍTULO (glow uniforme mesmo quebrando linha no celular) */
     h1 {
       font-family: 'Luckiest Guy', cursive;
       font-size: clamp(2rem, 8vw, 5rem);
       margin: 0;
       text-transform: uppercase;
       letter-spacing: 3px;
-      color: #fff;
-      text-shadow: 0 0 10px #fff, 0 0 20px var(--neon-1), 0 0 40px var(--neon-1), 0 0 80px var(--neon-1);
       animation: title-shake 0.5s ease-in-out infinite alternate;
+    }
+
+    .title-glow {
+      display: inline-block;
+      color: #fff;
+      padding: 0.05em 0.25em;
+      border-radius: 12px;
+
+      text-shadow:
+        0 0 6px #fff,
+        0 0 14px #fff,
+        0 0 28px var(--neon-1),
+        0 0 55px var(--neon-1),
+        0 0 90px var(--neon-1);
+
+      filter: drop-shadow(0 0 12px var(--neon-1));
     }
 
     .main-message {
@@ -124,7 +141,10 @@
     /* --- ANIMAÇÕES --- */
     @keyframes pulse-border {
       0% { box-shadow: 0 0 60px rgba(255, 0, 222, 0.4); }
-      100% { box-shadow: 0 0 90px rgba(0, 255, 34, 0.6); border-image: linear-gradient(45deg, var(--neon-3), var(--neon-1)) 1; }
+      100% {
+        box-shadow: 0 0 90px rgba(0, 255, 34, 0.6);
+        border-image: linear-gradient(45deg, var(--neon-3), var(--neon-1)) 1;
+      }
     }
 
     @keyframes title-shake {
@@ -163,6 +183,7 @@
       pointer-events: none;
       will-change: transform;
     }
+
     .balloon::after {
       content: '';
       position: absolute;
@@ -183,37 +204,61 @@
       100% { transform: translateY(-120svh) translateX(50px); }
     }
 
-    /* ===== MOBILE / STORIES ===== */
+    /* ===== MOBILE / STORIES (mantém animação, só deixa mais leve) ===== */
     @media (max-width: 600px) {
       body { padding: 12px; }
 
       .party-container {
         width: 100%;
         border-radius: 26px;
-        animation: none;
+        /* animação continua, só mais suave */
+        animation: pulse-border 2.2s infinite alternate;
         box-shadow: 0 0 26px rgba(255,0,222,0.35), inset 0 0 14px rgba(0, 255, 34, 0.18);
       }
 
-      /* layout "stories": timer em 2x2 */
+      /* glow do título mais equilibrado no mobile (evita "EMBORA" estourar) */
+      .title-glow {
+        line-height: 1.15;
+        letter-spacing: 2px;
+        text-shadow:
+          0 0 4px #fff,
+          0 0 10px #fff,
+          0 0 18px var(--neon-1),
+          0 0 35px var(--neon-1);
+        filter: drop-shadow(0 0 10px var(--neon-1));
+      }
+
+      /* timer em 2x2 */
       .timer-display {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         max-width: 420px;
         gap: 12px;
       }
 
-      /* sem hover e menos tremedeira pra não cansar */
+      /* mobile não tem hover */
       .timer-block:hover { transform: none; }
-      h1 { animation: none; }
 
-      /* banner mais coladinho */
-      .bottom-banner { animation: none; }
+      /* mantém o shake mas reduz a intensidade */
+      h1 { animation: title-shake 0.8s ease-in-out infinite alternate; }
+
+      /* mantém o pulso */
+      .bottom-banner { animation: text-pulse 1.2s infinite alternate; }
+    }
+
+    /* Acessibilidade: se o usuário pedir "reduzir movimento", aí sim desliga */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
     }
   </style>
 </head>
 
 <body>
   <div class="party-container" id="container">
-    <h1>O EDIMAR VAI EMBORA!</h1>
+    <h1><span class="title-glow">O EDIMAR VAI EMBORA!</span></h1>
     <div class="main-message">🥂 É FESTA NA EMPRESA! TODOS FELIZES! 🤸‍♂️</div>
 
     <div class="timer-display" aria-label="Contagem regressiva">
@@ -240,7 +285,6 @@
 
   <script>
     // DATA ALVO: 27 de Fevereiro de 2026 às 18:00:00 (horário local do dispositivo)
-    // Obs: no seu original era "amanhã", mas no arquivo estava fixo em 2026-02-27 18:00.
     const targetDate = new Date(2026, 1, 27, 18, 0, 0).getTime();
 
     const container = document.getElementById("container");
@@ -252,11 +296,13 @@
       if (diff <= 0) {
         clearInterval(timer);
         container.innerHTML = `
-          <h1 style="font-size: clamp(2.6rem, 12vw, 7rem); text-shadow: 0 0 20px #fff, 0 0 40px #0f0; animation:none;">
-            FALOOOOOU, EDIMAR!
+          <h1 style="font-size: clamp(2.6rem, 12vw, 7rem); animation:none;">
+            <span class="title-glow" style="text-shadow: 0 0 8px #fff, 0 0 18px #fff, 0 0 35px var(--neon-3), 0 0 70px var(--neon-3); filter: drop-shadow(0 0 14px var(--neon-3));">
+              FALOOOOOU, EDIMAR!
+            </span>
           </h1>
           <div style="font-size: clamp(2.4rem, 12vw, 5rem); margin-top: 1.2rem;">🥳🍾🎸💃🕺</div>
-          <div class="bottom-banner" style="font-size: clamp(1.4rem, 6vw, 3rem); animation:none;">
+          <div class="bottom-banner" style="font-size: clamp(1.4rem, 6vw, 3rem);">
             A LENDA SAIU DO PRÉDIO!
           </div>
         `;
@@ -274,12 +320,12 @@
       document.getElementById("seconds").innerText = s.toString().padStart(2, '0');
     }, 1000);
 
-    // Chuva de CONFETES e BALÕES (otimizado pra celular)
+    // Chuva de CONFETES e BALÕES (otimizado pra celular vertical)
     const colors = ['#ff00de', '#ff5e00', '#00ff22', '#00e1ff', '#ffff00'];
     const isMobile = window.matchMedia("(max-width: 600px)").matches;
 
     const totalConfetti = isMobile ? 45 : 150;
-    const balloonEvery = isMobile ? 10 : 5;  // menos balões no celular
+    const balloonEvery = isMobile ? 10 : 5;
 
     for (let i = 0; i < totalConfetti; i++) {
       const c = document.createElement('div');
