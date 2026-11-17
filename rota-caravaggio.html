@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rota Caravaggio • Santa Teresa/ES • 12/12/2026</title>
+<meta name="description" content="Informativo do bate-volta para Santa Teresa/ES em 12 de dezembro de 2026: café na natureza, almoço na serra e circuito de cervejas artesanais no Vale do Caravaggio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        forest: { DEFAULT: '#142119', 2: '#1b2c21', 3: '#24382b', line: '#2f4636' },
+        cream: { DEFAULT: '#F7F4EB', 2: '#EFEAD9', 3: '#E4DCC5' },
+        terra: { DEFAULT: '#9E3B24', 2: '#B5492F' },
+        amber: { DEFAULT: '#D99B26', 2: '#E8B34E' }
+      },
+      fontFamily: {
+        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; background:#142119; color:#F7F4EB; -webkit-font-smoothing:antialiased; }
+  ::selection { background:#D99B26; color:#142119; }
+  .grain::after { content:""; position:absolute; inset:0; pointer-events:none; opacity:.07; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  .glass { background:rgba(247,244,235,.08); border:1px solid rgba(247,244,235,.18); backdrop-filter:blur(14px) saturate(140%); -webkit-backdrop-filter:blur(14px) saturate(140%); }
+  .glass-dark { background:rgba(20,33,25,.62); border:1px solid rgba(247,244,235,.12); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); }
+  .layer { position:absolute; inset:-8% 0 auto 0; height:116%; will-change:transform; }
+  svg.layer { width:100%; }
+  .sun { box-shadow:0 0 70px 20px rgba(217,155,38,.3); }
+  @media (min-width:768px){ .sun { box-shadow:0 0 160px 60px rgba(217,155,38,.35); } }
+  html, body { overflow-x: hidden; overflow-x: clip; max-width: 100%; }
+  .reveal { opacity:0; transform:translateY(28px); transition:opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity:1; transform:none; }
+  .num { font-variant-numeric: lining-nums tabular-nums; }
+  .font-serif { font-variant-numeric: lining-nums; }
+  .ph { position:relative; overflow:hidden; }
+  .ph img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform 1.2s cubic-bezier(.2,.7,.2,1); }
+  .ph:hover img { transform:scale(1.05); }
+  .ph img.dead { display:none; }
+  .marquee { animation: mq 38s linear infinite; }
+  @keyframes mq { to { transform: translateX(-50%); } }
+  .spin { animation: spin 7s linear infinite; }
+  .paused .spin { animation-play-state: paused; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .eq span { display:inline-block; width:3px; background:#D99B26; border-radius:2px; animation: eq 1.1s ease-in-out infinite; }
+  .eq span:nth-child(2){animation-delay:.2s}.eq span:nth-child(3){animation-delay:.4s}.eq span:nth-child(4){animation-delay:.1s}.eq span:nth-child(5){animation-delay:.3s}
+  @keyframes eq { 0%,100%{height:4px} 50%{height:18px} }
+  .float { animation: float 6s ease-in-out infinite; }
+  .float-2 { animation: float 7.5s ease-in-out infinite reverse; }
+  @keyframes float { 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-10px) } }
+  .tick { transition: transform .35s cubic-bezier(.2,.7,.2,1), opacity .35s; }
+  .tick.flip { transform: translateY(-6px); opacity:.4; }
+  .rule { background-image: linear-gradient(90deg, rgba(217,155,38,.0), rgba(217,155,38,.7), rgba(217,155,38,0)); height:1px; }
+  .dotline { background-image: radial-gradient(circle, rgba(20,33,25,.35) 1px, transparent 1.5px); background-size: 8px 8px; }
+  @media (prefers-reduced-motion: reduce) { .reveal{opacity:1;transform:none;transition:none} .marquee,.spin,.float,.float-2,.eq span{animation:none} }
+</style>
+</head>
+<body class="overflow-x-hidden">
+
+<!-- ================= NAVBAR ================= -->
+<header id="nav" class="fixed top-3 inset-x-0 z-50 px-3 sm:px-6 transition-all duration-500">
+  <nav class="glass-dark mx-auto max-w-7xl rounded-full pl-3 sm:pl-5 pr-2 py-2 flex items-center gap-2 sm:gap-4 shadow-[0_10px_40px_-15px_rgba(0,0,0,.6)]">
+    <a href="#topo" class="flex items-center gap-2.5 min-w-0">
+      <span class="shrink-0 grid place-items-center w-8 h-8 rounded-full border border-amber/60 text-amber font-serif italic text-lg leading-none">C</span>
+      <span class="text-[10.5px] sm:text-[11px] tracking-[.18em] sm:tracking-[.22em] font-semibold leading-tight truncate">ROTA CARAVAGGIO<span class="hidden sm:inline"> <span class="text-amber">•</span> <span class="text-cream/60">SANTA TERESA/ES</span></span></span>
+    </a>
+    <div class="hidden lg:flex items-center gap-1 ml-auto text-[13px] text-cream/75">
+      <a href="#roteiro" class="px-3.5 py-2 rounded-full hover:text-cream hover:bg-cream/5 transition">O Roteiro</a>
+      <a href="#embarques" class="px-3.5 py-2 rounded-full hover:text-cream hover:bg-cream/5 transition">Embarques</a>
+      <a href="#playlist" class="px-3.5 py-2 rounded-full hover:text-cream hover:bg-cream/5 transition">Playlist</a>
+      <a href="#contagem" class="px-3.5 py-2 rounded-full hover:text-cream hover:bg-cream/5 transition">Contagem</a>
+    </div>
+    <a href="#contagem" class="shrink-0 ml-auto lg:ml-2 inline-flex items-center gap-1.5 rounded-full bg-amber text-forest font-bold text-[12.5px] sm:text-[13px] px-3.5 sm:px-5 py-2.5 hover:bg-amber-2 transition num whitespace-nowrap">
+      <i data-lucide="timer" class="w-4 h-4"></i><span><span class="hidden sm:inline">Faltam </span><span data-u="d">00</span> dias</span>
+    </a>
+    <button id="menuBtn" class="shrink-0 lg:hidden grid place-items-center w-10 h-10 rounded-full border border-cream/15" aria-label="Abrir menu"><i data-lucide="menu" class="w-4 h-4"></i></button>
+  </nav>
+  <div id="menu" class="lg:hidden hidden mx-auto max-w-7xl mt-2 glass-dark rounded-3xl p-3 text-[15px]">
+    <a href="#roteiro" class="flex justify-between px-4 py-3 rounded-2xl hover:bg-cream/5">O Roteiro <span class="text-cream/40 text-xs">09h às 18h30</span></a>
+    <a href="#embarques" class="flex justify-between px-4 py-3 rounded-2xl hover:bg-cream/5">Embarques <span class="text-cream/40 text-xs">3 pontos</span></a>
+    <a href="#playlist" class="flex justify-between px-4 py-3 rounded-2xl hover:bg-cream/5">Playlist <span class="text-cream/40 text-xs">112 faixas</span></a>
+    <a href="#contagem" class="flex justify-between px-4 py-3 rounded-2xl hover:bg-cream/5">Contagem regressiva <span class="text-amber text-xs font-semibold">12.12</span></a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="topo" class="relative min-h-[100svh] overflow-hidden grain bg-forest">
+  <!-- camada 0: foto -->
+  <div class="layer ph" data-speed="0.15">
+    <div class="absolute inset-0 bg-gradient-to-b from-[#3a2a1b] via-[#7a4a22] to-[#d99b26]"></div>
+    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=70" alt="" class="opacity-55 mix-blend-luminosity" onerror="this.classList.add('dead')">
+    <div class="absolute inset-0 bg-gradient-to-b from-forest/70 via-terra/25 to-transparent"></div>
+  </div>
+  <!-- sol -->
+  <div class="layer pointer-events-none" data-speed="0.22">
+    <div class="absolute left-[75%] md:left-[68%] top-[30%] md:top-[46%] -translate-x-1/2 w-[180px] h-[180px] md:w-[340px] md:h-[340px] rounded-full bg-amber/70 blur-[2px] sun"></div>
+  </div>
+  <!-- camadas de montanhas -->
+  <svg class="layer" data-speed="0.3" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <path d="M0 610 L120 560 L230 590 L360 500 L470 560 L590 470 L720 540 L860 450 L990 530 L1120 470 L1260 540 L1440 480 L1440 900 L0 900Z" fill="#6b3a24" opacity=".55"/>
+  </svg>
+  <svg class="layer" data-speed="0.42" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <path d="M0 690 C140 640 220 600 330 630 C430 655 520 560 640 590 C760 620 830 680 960 640 C1080 600 1180 560 1300 610 C1370 640 1410 650 1440 640 L1440 900 L0 900Z" fill="#2f4636"/>
+  </svg>
+  <svg class="layer" data-speed="0.58" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <path d="M0 760 C160 720 260 700 380 730 C520 765 600 690 760 700 C900 710 980 770 1120 740 C1260 710 1350 720 1440 735 L1440 900 L0 900Z" fill="#1b2c21"/>
+    <!-- rampa de voo livre -->
+    <path d="M1010 742 L1110 728 L1112 732 L1012 746Z" fill="#D99B26" opacity=".7"/>
+  </svg>
+  <svg class="layer" data-speed="0.75" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <path d="M0 840 C200 800 330 815 470 830 C640 848 760 800 920 812 C1080 824 1220 850 1440 820 L1440 900 L0 900Z" fill="#142119"/>
+  </svg>
+
+  <!-- conteúdo -->
+  <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 pt-32 sm:pt-36 pb-14 min-h-[100svh] flex flex-col">
+    <div class="flex flex-wrap items-center gap-2 text-[11px] tracking-[.2em] uppercase text-cream/80">
+      <span class="glass rounded-full px-3 py-1.5 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-amber animate-pulse"></span>Informativo oficial</span>
+      <span class="glass rounded-full px-3 py-1.5">Edição 12.12.2026</span>
+      <span class="glass rounded-full px-3 py-1.5 hidden sm:inline-flex">Bate-volta • Vitória ⇄ Santa Teresa</span>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-8 mt-8 lg:mt-12 items-end flex-1">
+      <div class="lg:col-span-8">
+        <h1 class="font-serif text-[46px] leading-[.95] sm:text-7xl lg:text-[96px] font-medium tracking-[-.01em]">
+          Rota <em class="text-amber font-normal">Caravaggio</em><span class="text-amber">:</span><br>
+          <span class="text-cream/95">Um dia entre montanhas,</span>
+          <em class="font-normal">sabores e cervejas artesanais.</em>
+        </h1>
+        <p class="mt-6 max-w-2xl text-[15px] sm:text-[17px] text-cream/80 leading-relaxed">
+          <strong class="text-cream font-semibold">Sábado, 12 de Dezembro de 2026</strong> <span class="text-amber">•</span> Saída às 08h00 <span class="text-amber">•</span> Bate-volta exclusivo para Santa Teresa/ES.
+        </p>
+      </div>
+
+      <!-- badges flutuantes -->
+      <div class="lg:col-span-4 relative hidden lg:block h-full">
+        <div class="float absolute right-2 top-6 glass rounded-2xl p-4 w-52">
+          <div class="flex items-center gap-2 text-amber text-[11px] uppercase tracking-[.18em] font-semibold"><i data-lucide="mountain" class="w-4 h-4"></i>Altitude</div>
+          <div class="font-serif text-5xl mt-1 num">915<span class="text-2xl">m</span></div>
+          <div class="text-[12px] text-cream/70">Rampa de Voo Livre, mirante do Vale do Caravaggio</div>
+        </div>
+        <div class="float-2 absolute left-0 bottom-44 glass rounded-full pl-2 pr-4 py-2 flex items-center gap-2.5">
+          <span class="grid place-items-center w-9 h-9 rounded-full bg-terra"><i data-lucide="feather" class="w-4 h-4"></i></span>
+          <div><div class="font-serif italic text-xl leading-none">Terra dos Colibris</div><div class="text-[10.5px] tracking-[.18em] uppercase text-cream/60 mt-0.5">Desde 1874</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- countdown + CTA -->
+    <div class="mt-10 grid lg:grid-cols-12 gap-4 items-stretch">
+      <div class="lg:col-span-8 glass-dark rounded-[28px] p-3 sm:p-4">
+        <div class="flex items-center justify-between px-2 pb-3 text-[11px] uppercase tracking-[.2em] text-cream/70">
+          <span class="flex items-center gap-2"><i data-lucide="timer" class="w-3.5 h-3.5 text-amber"></i>Contagem para o embarque</span>
+          <span class="hidden sm:inline">12/12/2026 • 08:00:00 (Brasília)</span>
+        </div>
+        <div id="cd" class="cd-group grid grid-cols-4 gap-2 sm:gap-3">
+          <div class="glass rounded-2xl py-4 sm:py-5 text-center"><div class="tick font-serif text-4xl sm:text-6xl num leading-none" data-u="d">000</div><div class="mt-2 text-[10px] sm:text-[11px] tracking-[.22em] uppercase text-cream/65">Dias</div></div>
+          <div class="glass rounded-2xl py-4 sm:py-5 text-center"><div class="tick font-serif text-4xl sm:text-6xl num leading-none" data-u="h">00</div><div class="mt-2 text-[10px] sm:text-[11px] tracking-[.22em] uppercase text-cream/65">Horas</div></div>
+          <div class="glass rounded-2xl py-4 sm:py-5 text-center"><div class="tick font-serif text-4xl sm:text-6xl num leading-none" data-u="m">00</div><div class="mt-2 text-[10px] sm:text-[11px] tracking-[.22em] uppercase text-cream/65">Min</div></div>
+          <div class="glass rounded-2xl py-4 sm:py-5 text-center"><div class="tick font-serif text-4xl sm:text-6xl num leading-none text-amber" data-u="s">00</div><div class="mt-2 text-[10px] sm:text-[11px] tracking-[.22em] uppercase text-cream/65">Seg</div></div>
+        </div>
+        <div id="cdDone" class="cd-done hidden text-center font-serif italic text-3xl py-6">A van já está na estrada. Boa viagem!</div>
+      </div>
+      <div class="lg:col-span-4 flex flex-col gap-3">
+        <a href="#roteiro" class="group flex-1 rounded-[28px] bg-amber text-forest p-6 flex flex-col justify-between hover:bg-amber-2 transition min-h-[150px]">
+          <div class="flex items-start justify-between">
+            <span class="text-[11px] tracking-[.22em] uppercase font-bold">Anote na agenda</span>
+            <span class="grid place-items-center w-11 h-11 rounded-full bg-forest text-amber group-hover:rotate-45 transition"><i data-lucide="calendar-days" class="w-5 h-5"></i></span>
+          </div>
+          <div>
+            <div class="font-serif text-5xl leading-none num">Sáb, 12.12</div>
+            <div class="text-[12.5px] font-medium mt-1 opacity-80">Saída 08h00 • Jardim da Penha, Vitória/ES</div>
+          </div>
+        </a>
+        <a href="#roteiro" class="glass rounded-full px-5 py-3 text-[13px] flex items-center justify-between hover:bg-cream/10 transition">Ver o roteiro completo <i data-lucide="arrow-down" class="w-4 h-4"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- faixa -->
+<div class="bg-terra text-cream overflow-hidden border-y border-black/10">
+  <div class="marquee flex whitespace-nowrap py-3.5 text-[13px] tracking-[.2em] uppercase font-semibold w-max">
+    <div class="flex gap-10 pr-10">
+      <span>Fioritá Café e Jardim</span><span class="text-amber">✦</span><span>Vincia Restaurante e Adega</span><span class="text-amber">✦</span><span>Cervejaria Três Santas</span><span class="text-amber">✦</span><span>Villaggio Zamprogno</span><span class="text-amber">✦</span><span>WO Santa Teresa</span><span class="text-amber">✦</span><span>915m de altitude</span><span class="text-amber">✦</span>
+    </div>
+    <div class="flex gap-10 pr-10" aria-hidden="true">
+      <span>Fioritá Café e Jardim</span><span class="text-amber">✦</span><span>Vincia Restaurante e Adega</span><span class="text-amber">✦</span><span>Cervejaria Três Santas</span><span class="text-amber">✦</span><span>Villaggio Zamprogno</span><span class="text-amber">✦</span><span>WO Santa Teresa</span><span class="text-amber">✦</span><span>915m de altitude</span><span class="text-amber">✦</span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= A EXPERIÊNCIA ================= -->
+<section id="experiencia" class="bg-cream text-forest relative">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 py-20 sm:py-28">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-14">
+      <div class="lg:col-span-5 reveal">
+        <div class="flex items-center gap-3 text-[11px] tracking-[.24em] uppercase text-terra font-bold"><span class="w-8 h-px bg-terra"></span>01 • A Experiência</div>
+        <h2 class="font-serif text-5xl sm:text-6xl leading-[.95] mt-5">A primeira Itália<br><em class="text-terra">do Brasil</em> fica a 80 km do mar.</h2>
+        <div class="mt-8 ph rounded-[28px] aspect-[4/5] bg-gradient-to-br from-forest-3 to-forest">
+          <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 500" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><circle cx="280" cy="170" r="70" fill="#D99B26" opacity=".8"/><path d="M0 330 L90 270 L160 310 L250 240 L330 300 L400 260 L400 500 L0 500Z" fill="#9E3B24" opacity=".6"/><path d="M0 390 C80 360 160 350 240 380 C310 405 360 380 400 370 L400 500 L0 500Z" fill="#1b2c21"/></svg>
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=70" alt="Vale verde entre montanhas" loading="lazy" onerror="this.classList.add('dead')">
+          <div class="absolute left-4 bottom-4 right-4 glass-dark rounded-2xl p-4 text-cream flex items-center justify-between text-[12px]">
+            <span class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-amber"></i>Santa Teresa • Região Serrana/ES</span>
+            <span class="num text-cream/60">19°56'S 40°36'W</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 lg:pt-24 reveal">
+        <p class="font-serif text-[26px] sm:text-[32px] leading-[1.22] text-forest/90">
+          <span class="float-left font-serif text-[92px] leading-[.78] mr-3 mt-1 text-terra">S</span>anta Teresa foi a <em>primeira cidade de colonização italiana do Brasil</em>. Entre neblina, cafezais e ipês, os imigrantes trouxeram a mesa farta, o vinho e o hábito de receber bem. Hoje, a "Terra dos Colibris" soma a isso uma das cenas cervejeiras mais vivas das montanhas capixabas.
+        </p>
+        <div class="rule my-10"></div>
+        <div class="grid sm:grid-cols-2 gap-6 text-[14.5px] leading-relaxed text-forest/75">
+          <p><strong class="text-forest">Você só precisa embarcar.</strong> A van sai de Vitória às 08h00, passa por Enseada do Suá e Cariacica, e sobe a serra com trilha sonora própria. Nada de dirigir depois do chope.</p>
+          <p><strong class="text-forest">Um dia em cinco atos.</strong> Café na natureza, almoço com carta de vinhos, e uma tarde inteira no Vale do Caravaggio até o pôr do sol a 915 metros de altitude.</p>
+        </div>
+
+        <div class="mt-12 grid grid-cols-2 xl:grid-cols-4 gap-3">
+          <div class="rounded-3xl bg-forest text-cream p-5 flex flex-col justify-between min-h-[170px]">
+            <i data-lucide="mountain-snow" class="w-5 h-5 text-amber"></i>
+            <div><div class="font-serif text-5xl num leading-none" data-count="915">915<span class="text-2xl">m</span></div><div class="text-[12px] text-cream/65 mt-2 leading-snug">de altitude na Rampa de Voo Livre</div></div>
+          </div>
+          <div class="rounded-3xl bg-terra text-cream p-5 flex flex-col justify-between min-h-[170px]">
+            <i data-lucide="utensils" class="w-5 h-5 text-amber-2"></i>
+            <div><div class="font-serif text-5xl num leading-none">5</div><div class="text-[12px] text-cream/75 mt-2 leading-snug">paradas gastronômicas e cervejeiras</div></div>
+          </div>
+          <div class="rounded-3xl bg-amber text-forest p-5 flex flex-col justify-between min-h-[170px]">
+            <i data-lucide="beer" class="w-5 h-5"></i>
+            <div><div class="font-serif text-5xl num leading-none">+20</div><div class="text-[12px] text-forest/75 mt-2 leading-snug">rótulos artesanais para provar</div></div>
+          </div>
+          <div class="rounded-3xl border border-forest/15 bg-cream-2 p-5 flex flex-col justify-between min-h-[170px]">
+            <i data-lucide="disc-3" class="w-5 h-5 text-terra"></i>
+            <div><div class="font-serif text-5xl num leading-none">112</div><div class="text-[12px] text-forest/65 mt-2 leading-snug">músicas na trilha oficial da van</div></div>
+          </div>
+        </div>
+
+        <!-- mini dia -->
+        <div class="mt-3 rounded-3xl border border-forest/15 p-5">
+          <div class="flex items-center justify-between text-[11px] uppercase tracking-[.2em] text-forest/55 font-semibold"><span>O dia em uma linha</span><span class="num">08h00 → 18h30</span></div>
+          <div class="mt-4 relative h-9 rounded-full bg-cream-3 overflow-hidden flex text-[10.5px] font-semibold">
+            <div class="h-full bg-forest/20 grid place-items-center" style="width:9%" title="Embarques e estrada">🚐</div>
+            <div class="h-full bg-forest text-cream grid place-items-center" style="width:19%">Café</div>
+            <div class="h-full bg-forest/20" style="width:9.5%"></div>
+            <div class="h-full bg-terra text-cream grid place-items-center" style="width:24%">Almoço</div>
+            <div class="h-full bg-forest/20" style="width:4.5%"></div>
+            <div class="h-full bg-amber text-forest grid place-items-center" style="width:34%">Circuito Caravaggio</div>
+          </div>
+          <div class="mt-2 flex justify-between text-[10.5px] text-forest/50 num"><span>08h</span><span>10h</span><span>12h</span><span>14h</span><span>16h</span><span>18h30</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ROTEIRO ================= -->
+<section id="roteiro" class="relative bg-forest grain">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 py-20 sm:py-28 relative z-10">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 reveal">
+      <div>
+        <div class="flex items-center gap-3 text-[11px] tracking-[.24em] uppercase text-amber font-bold"><span class="w-8 h-px bg-amber"></span>02 • O Roteiro</div>
+        <h2 class="font-serif text-5xl sm:text-7xl leading-[.92] mt-5">Do primeiro café<br><em class="text-amber">ao último chope.</em></h2>
+      </div>
+      <div class="flex gap-2 text-[12px]" role="tablist" id="tabs">
+        <button data-t="all" class="tab px-4 py-2 rounded-full bg-cream text-forest font-semibold">Dia inteiro</button>
+        <button data-t="manha" class="tab px-4 py-2 rounded-full border border-cream/20 text-cream/75">Manhã</button>
+        <button data-t="tarde" class="tab px-4 py-2 rounded-full border border-cream/20 text-cream/75">Tarde</button>
+      </div>
+    </div>
+
+    <ol class="mt-14 relative">
+      <span class="absolute left-[19px] md:left-[calc(16.666%+19px)] top-2 bottom-2 w-px bg-gradient-to-b from-amber via-cream/20 to-terra" aria-hidden="true"></span>
+
+      <!-- 1 -->
+      <li class="step reveal relative grid md:grid-cols-6 gap-6 pb-16" data-p="manha">
+        <div class="hidden md:block text-right pr-10 pt-1">
+          <div class="font-serif text-4xl num">09h00</div><div class="text-cream/50 text-[12px] num">às 11h00</div>
+        </div>
+        <div class="md:col-span-5 pl-14 md:pl-14 relative">
+          <span class="absolute left-0 md:-left-0 top-0 grid place-items-center w-10 h-10 rounded-full bg-amber text-forest font-bold text-sm">01</span>
+          <div class="md:hidden text-amber font-semibold text-[13px] num mb-2">09h00 às 11h00</div>
+          <div class="grid lg:grid-cols-5 gap-6 items-start">
+            <div class="lg:col-span-3">
+              <div class="text-[11px] tracking-[.22em] uppercase text-cream/50 flex items-center gap-2"><i data-lucide="coffee" class="w-3.5 h-3.5 text-amber"></i>Café da Manhã na Natureza</div>
+              <h3 class="font-serif text-4xl sm:text-5xl mt-2">Fioritá <em>Café e Jardim</em></h3>
+              <p class="mt-4 text-cream/75 leading-relaxed text-[15px]">Na entrada de Santa Teresa. Ambiente integrado à natureza com cafés especiais, pães artesanais, quitutes, jardim sensorial com flores, aves e viveiro de orquídeas.</p>
+              <div class="mt-5 flex flex-wrap gap-2 text-[12px]">
+                <span class="rounded-full border border-cream/15 px-3 py-1.5">Cafés especiais</span><span class="rounded-full border border-cream/15 px-3 py-1.5">Pães artesanais</span><span class="rounded-full border border-cream/15 px-3 py-1.5">Orquidário</span><span class="rounded-full border border-cream/15 px-3 py-1.5">Jardim sensorial</span>
+              </div>
+              <a href="https://instagram.com/fioritacafejardim" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 text-amber hover:text-amber-2 text-[14px] font-semibold"><i data-lucide="instagram" class="w-4 h-4"></i>@fioritacafejardim<i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></a>
+            </div>
+            <div class="lg:col-span-2 ph rounded-3xl aspect-[4/3] lg:aspect-[4/5] bg-gradient-to-br from-[#5b3a22] to-[#2a1a10]">
+              <svg class="absolute inset-0 w-full h-full" viewBox="0 0 300 300" aria-hidden="true"><circle cx="150" cy="160" r="80" fill="#F7F4EB" opacity=".9"/><circle cx="150" cy="160" r="58" fill="#6b3a1e"/><path d="M118 150c20-18 44-18 64 0" stroke="#D99B26" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M230 140c22 0 22 40 0 40" stroke="#F7F4EB" stroke-width="10" fill="none"/></svg>
+              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=70" alt="Xícara de café especial" loading="lazy" onerror="this.classList.add('dead')">
+              <span class="absolute top-3 left-3 glass-dark rounded-full px-3 py-1 text-[11px] num">2h de parada</span>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- 2 -->
+      <li class="step reveal relative grid md:grid-cols-6 gap-6 pb-16" data-p="manha">
+        <div class="hidden md:block text-right pr-10 pt-1">
+          <div class="font-serif text-4xl num">12h00</div><div class="text-cream/50 text-[12px] num">às 14h30</div>
+        </div>
+        <div class="md:col-span-5 pl-14 relative">
+          <span class="absolute left-0 top-0 grid place-items-center w-10 h-10 rounded-full bg-terra text-cream font-bold text-sm">02</span>
+          <div class="md:hidden text-amber font-semibold text-[13px] num mb-2">12h00 às 14h30</div>
+          <div class="grid lg:grid-cols-5 gap-6 items-start">
+            <div class="lg:col-span-2 ph rounded-3xl aspect-[4/3] lg:aspect-[4/5] bg-gradient-to-br from-terra to-[#4a1b10] order-2 lg:order-1">
+              <svg class="absolute inset-0 w-full h-full" viewBox="0 0 300 300" aria-hidden="true"><ellipse cx="150" cy="180" rx="110" ry="40" fill="#F7F4EB" opacity=".9"/><path d="M90 175c20-30 100-30 120 0" stroke="#D99B26" stroke-width="10" fill="none" stroke-linecap="round"/><path d="M215 60 v70 M205 60 v30 M225 60 v30" stroke="#F7F4EB" stroke-width="5"/><path d="M80 70 c0 30 20 40 20 60 v40" stroke="#F7F4EB" stroke-width="5" fill="none"/></svg>
+              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=70" alt="Restaurante com mesa posta" loading="lazy" onerror="this.classList.add('dead')">
+              <span class="absolute top-3 left-3 glass-dark rounded-full px-3 py-1 text-[11px] num">2h30 de parada</span>
+            </div>
+            <div class="lg:col-span-3 order-1 lg:order-2">
+              <div class="text-[11px] tracking-[.22em] uppercase text-cream/50 flex items-center gap-2"><i data-lucide="wine" class="w-3.5 h-3.5 text-amber"></i>Almoço na Serra</div>
+              <h3 class="font-serif text-4xl sm:text-5xl mt-2">Vincia <em>Restaurante e Adega</em></h3>
+              <p class="mt-4 text-cream/75 leading-relaxed text-[15px]">Em São Sebastião da Penha. Pratos sofisticados, massas, grelhados e carta de vinhos completa em ambiente cercado de verde.</p>
+              <div class="mt-5 grid grid-cols-3 gap-2 text-center">
+                <div class="rounded-2xl bg-cream/5 border border-cream/10 py-3"><i data-lucide="chef-hat" class="w-4 h-4 mx-auto text-amber"></i><div class="text-[11.5px] mt-1.5 text-cream/70">Massas</div></div>
+                <div class="rounded-2xl bg-cream/5 border border-cream/10 py-3"><i data-lucide="flame" class="w-4 h-4 mx-auto text-amber"></i><div class="text-[11.5px] mt-1.5 text-cream/70">Grelhados</div></div>
+                <div class="rounded-2xl bg-cream/5 border border-cream/10 py-3"><i data-lucide="grape" class="w-4 h-4 mx-auto text-amber"></i><div class="text-[11.5px] mt-1.5 text-cream/70">Adega</div></div>
+              </div>
+              <a href="https://instagram.com/vinciaoficialsantateresa" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 text-amber hover:text-amber-2 text-[14px] font-semibold"><i data-lucide="instagram" class="w-4 h-4"></i>@vinciaoficialsantateresa<i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- 3 -->
+      <li class="step reveal relative grid md:grid-cols-6 gap-6" data-p="tarde">
+        <div class="hidden md:block text-right pr-10 pt-1">
+          <div class="font-serif text-4xl num">15h00</div><div class="text-cream/50 text-[12px] num">às 18h30</div>
+        </div>
+        <div class="md:col-span-5 pl-14 relative">
+          <span class="absolute left-0 top-0 grid place-items-center w-10 h-10 rounded-full bg-cream text-forest font-bold text-sm">03</span>
+          <div class="md:hidden text-amber font-semibold text-[13px] num mb-2">15h00 às 18h30</div>
+          <div class="text-[11px] tracking-[.22em] uppercase text-cream/50 flex items-center gap-2"><i data-lucide="beer" class="w-3.5 h-3.5 text-amber"></i>Tarde de Cervejas Artesanais</div>
+          <h3 class="font-serif text-4xl sm:text-6xl mt-2">Circuito <em class="text-amber">Caravaggio</em></h3>
+          <p class="mt-3 text-cream/70 max-w-2xl text-[15px]">Três paradas no vale, subindo até o mirante. A ordem acompanha a luz: o pôr do sol fica para o alto da rampa.</p>
+
+          <div class="mt-8 grid md:grid-cols-3 gap-4">
+            <!-- Três Santas -->
+            <article class="group rounded-[26px] bg-cream text-forest overflow-hidden flex flex-col ring-2 ring-amber">
+              <div class="ph aspect-[16/11] bg-gradient-to-br from-amber to-[#8a5a12]">
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 300 200" aria-hidden="true"><path d="M120 50 h60 l-6 120 h-48z" fill="#F7F4EB" opacity=".35"/><path d="M124 80 h52 l-5 88 h-42z" fill="#D99B26"/><rect x="118" y="44" width="64" height="22" rx="10" fill="#F7F4EB"/></svg>
+                <img src="https://images.unsplash.com/photo-1535958636474-b021ee887b13?auto=format&fit=crop&w=800&q=70" alt="Copos de cerveja artesanal" loading="lazy" onerror="this.classList.add('dead')">
+                <span class="absolute top-3 left-3 rounded-full bg-terra text-cream px-3 py-1 text-[10.5px] font-bold tracking-[.14em] uppercase">Ponto alto</span>
+                <span class="absolute top-3 right-3 rounded-full bg-forest text-amber px-2.5 py-1 text-[11px] font-bold num">3.1</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col">
+                <h4 class="font-serif text-3xl leading-none">Cervejaria <em>Três Santas</em></h4>
+                <p class="mt-3 text-[13.5px] text-forest/70 leading-relaxed flex-1">Uma das mais premiadas do ES e ponto alto do circuito: +20 rótulos, petiscos e vista para as montanhas.</p>
+                <div class="mt-4 flex items-center gap-3 text-[11.5px] text-forest/60"><span class="flex items-center gap-1"><i data-lucide="award" class="w-3.5 h-3.5 text-terra"></i>Premiada</span><span class="flex items-center gap-1"><i data-lucide="beer" class="w-3.5 h-3.5 text-terra"></i>+20 rótulos</span></div>
+                <a href="https://instagram.com/cervejariatressantas" target="_blank" rel="noopener" class="mt-4 pt-4 border-t border-forest/10 flex items-center justify-between text-[13px] font-semibold text-terra"><span class="flex items-center gap-2"><i data-lucide="instagram" class="w-4 h-4"></i>@cervejariatressantas</span><i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+              </div>
+            </article>
+            <!-- Zamprogno -->
+            <article class="group rounded-[26px] bg-forest-2 border border-cream/10 overflow-hidden flex flex-col">
+              <div class="ph aspect-[16/11] bg-gradient-to-br from-forest-3 to-forest">
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 300 200" aria-hidden="true"><path d="M0 150 L70 100 L130 130 L200 80 L300 130 L300 200 L0 200Z" fill="#9E3B24" opacity=".7"/><path d="M60 150 h80 v-40 l-40 -25 l-40 25z" fill="#F7F4EB" opacity=".85"/><rect x="90" y="125" width="20" height="25" fill="#142119"/></svg>
+                <img src="https://images.unsplash.com/photo-1559526642-c3f001ea68ee?auto=format&fit=crop&w=800&q=70" alt="Chope artesanal" loading="lazy" onerror="this.classList.add('dead')">
+                <span class="absolute top-3 right-3 rounded-full bg-cream text-forest px-2.5 py-1 text-[11px] font-bold num">3.2</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col">
+                <h4 class="font-serif text-3xl leading-none">Villaggio <em class="text-amber">Zamprogno</em></h4>
+                <p class="mt-3 text-[13.5px] text-cream/70 leading-relaxed flex-1">Mais opções de chope artesanal, aperitivos e paisagem da serra.</p>
+                <div class="mt-4 flex items-center gap-3 text-[11.5px] text-cream/55"><span class="flex items-center gap-1"><i data-lucide="beer" class="w-3.5 h-3.5 text-amber"></i>Chope</span><span class="flex items-center gap-1"><i data-lucide="sandwich" class="w-3.5 h-3.5 text-amber"></i>Aperitivos</span></div>
+                <a href="https://instagram.com/villaggiozamprogno" target="_blank" rel="noopener" class="mt-4 pt-4 border-t border-cream/10 flex items-center justify-between text-[13px] font-semibold text-amber"><span class="flex items-center gap-2"><i data-lucide="instagram" class="w-4 h-4"></i>@villaggiozamprogno</span><i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+              </div>
+            </article>
+            <!-- WO -->
+            <article class="group rounded-[26px] bg-terra overflow-hidden flex flex-col">
+              <div class="ph aspect-[16/11] bg-gradient-to-b from-amber via-terra-2 to-[#3a1a10]">
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 300 200" aria-hidden="true"><circle cx="210" cy="95" r="32" fill="#F7F4EB" opacity=".85"/><path d="M0 160 C60 120 120 140 170 120 C220 100 260 130 300 120 L300 200 L0 200Z" fill="#142119"/><path d="M40 70 q30 -25 60 0" stroke="#F7F4EB" stroke-width="4" fill="none"/><path d="M70 70 l-10 22 M70 70 l10 22" stroke="#F7F4EB" stroke-width="1.5"/></svg>
+                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=70" alt="Pôr do sol nas montanhas" loading="lazy" onerror="this.classList.add('dead')">
+                <span class="absolute top-3 left-3 rounded-full bg-forest/80 text-amber px-3 py-1 text-[10.5px] font-bold tracking-[.14em] uppercase">915m • Pôr do sol</span>
+                <span class="absolute top-3 right-3 rounded-full bg-cream text-forest px-2.5 py-1 text-[11px] font-bold num">3.3</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col">
+                <h4 class="font-serif text-3xl leading-none">WO <em class="text-amber-2">Santa Teresa</em></h4>
+                <p class="mt-3 text-[13.5px] text-cream/80 leading-relaxed flex-1">Na rampa de voo livre, a 915m de altitude, com vista panorâmica do alto para o Vale do Caravaggio, chope e petiscos ao ar livre.</p>
+                <div class="mt-4 flex items-center gap-3 text-[11.5px] text-cream/70"><span class="flex items-center gap-1"><i data-lucide="mountain" class="w-3.5 h-3.5 text-amber-2"></i>Mirante</span><span class="flex items-center gap-1"><i data-lucide="sunset" class="w-3.5 h-3.5 text-amber-2"></i>Ao ar livre</span></div>
+                <a href="https://instagram.com/wosantateresa" target="_blank" rel="noopener" class="mt-4 pt-4 border-t border-cream/15 flex items-center justify-between text-[13px] font-semibold text-amber-2"><span class="flex items-center gap-2"><i data-lucide="instagram" class="w-4 h-4"></i>@wosantateresa</span><i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="mt-6 flex items-center gap-3 rounded-2xl border border-dashed border-cream/20 px-5 py-4 text-[13.5px] text-cream/70">
+            <i data-lucide="bus" class="w-5 h-5 text-amber shrink-0"></i>
+            <span><strong class="text-cream">18h30</strong>: retorno para a Grande Vitória, com desembarque nos mesmos pontos de embarque.</span>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= EMBARQUES ================= -->
+<section id="embarques" class="bg-cream text-forest">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 py-20 sm:py-28">
+    <div class="grid lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-4 reveal">
+        <div class="flex items-center gap-3 text-[11px] tracking-[.24em] uppercase text-terra font-bold"><span class="w-8 h-px bg-terra"></span>03 • Embarques</div>
+        <h2 class="font-serif text-5xl sm:text-6xl leading-[.95] mt-5">Três pontos.<br><em class="text-terra">Uma só van.</em></h2>
+        <p class="mt-5 text-forest/70 text-[15px] leading-relaxed">Ordem oficial de embarque. Chegue 10 minutos antes do horário: a van segue o roteiro e não espera atrasos.</p>
+        <div class="mt-8 rounded-3xl bg-forest text-cream p-5">
+          <div class="text-[11px] uppercase tracking-[.2em] text-cream/55">Saída oficial</div>
+          <div class="font-serif text-6xl num mt-1">08h00</div>
+          <div class="text-[13px] text-cream/70 mt-1">Sábado, 12/12/2026 • Jardim da Penha</div>
+          <div class="mt-4 h-px bg-cream/10"></div>
+          <div class="mt-4 flex items-center gap-2 text-[12.5px] text-cream/70"><i data-lucide="info" class="w-4 h-4 text-amber"></i>Horários das paradas 2 e 3 serão confirmados no grupo.</div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-8 space-y-3 reveal">
+        <!-- ponto 1 -->
+        <div class="rounded-[26px] bg-white/60 border border-forest/10 p-5 sm:p-6 grid sm:grid-cols-[auto_1fr_auto] gap-5 items-center">
+          <div class="flex sm:flex-col items-center gap-3 sm:gap-1 sm:w-20">
+            <span class="font-serif text-6xl leading-none text-terra">1</span>
+            <span class="rounded-full bg-terra text-cream text-[11px] font-bold px-2.5 py-1 num">08h00</span>
+          </div>
+          <div>
+            <div class="text-[11px] uppercase tracking-[.2em] text-forest/50 font-semibold">Saída</div>
+            <h3 class="font-serif text-3xl leading-tight">Posto Petrobras + GNV</h3>
+            <p class="text-[14px] text-forest/75 mt-1">Av. Dante Michelini, 1187, Jardim da Penha, Vitória/ES</p>
+            <p class="text-[12px] text-forest/50 num mt-0.5">CEP 29060-235</p>
+          </div>
+          <div class="flex sm:flex-col gap-2">
+            <button class="copy flex-1 inline-flex items-center justify-center gap-2 rounded-full border border-forest/20 px-4 py-2.5 text-[13px] font-semibold hover:bg-forest hover:text-cream transition" data-copy="Av. Dante Michelini, 1187, Jardim da Penha, Vitória/ES, CEP 29060-235" data-done="Copiado ✓"><i data-lucide="copy" class="w-4 h-4"></i><span>Copiar endereço</span></button>
+            <a class="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-forest text-cream px-4 py-2.5 text-[13px] font-semibold hover:bg-terra transition" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Av.+Dante+Michelini,+1187,+Jardim+da+Penha,+Vit%C3%B3ria+ES+29060-235"><i data-lucide="map" class="w-4 h-4"></i>Abrir no Maps</a>
+          </div>
+        </div>
+        <!-- ponto 2 -->
+        <div class="rounded-[26px] bg-white/60 border border-forest/10 p-5 sm:p-6 grid sm:grid-cols-[auto_1fr_auto] gap-5 items-center">
+          <div class="flex sm:flex-col items-center gap-3 sm:gap-1 sm:w-20">
+            <span class="font-serif text-6xl leading-none text-terra">2</span>
+            <span class="rounded-full bg-forest/10 text-forest text-[11px] font-bold px-2.5 py-1">Parada 2</span>
+          </div>
+          <div>
+            <div class="text-[11px] uppercase tracking-[.2em] text-forest/50 font-semibold">Enseada do Suá</div>
+            <h3 class="font-serif text-3xl leading-tight">Assembleia Legislativa do ES <span class="text-forest/50">(ALES)</span></h3>
+            <p class="text-[14px] text-forest/75 mt-1">Av. Américo Buaiz, 205, Enseada do Suá, Vitória/ES</p>
+            <p class="text-[12px] text-forest/50 num mt-0.5">CEP 29050-950</p>
+          </div>
+          <div class="flex sm:flex-col gap-2">
+            <button class="copy flex-1 inline-flex items-center justify-center gap-2 rounded-full border border-forest/20 px-4 py-2.5 text-[13px] font-semibold hover:bg-forest hover:text-cream transition" data-copy="Av. Américo Buaiz, 205, Enseada do Suá, Vitória/ES, CEP 29050-950" data-done="Copiado ✓"><i data-lucide="copy" class="w-4 h-4"></i><span>Copiar endereço</span></button>
+            <a class="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-forest text-cream px-4 py-2.5 text-[13px] font-semibold hover:bg-terra transition" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Assembleia+Legislativa+do+Esp%C3%ADrito+Santo,+Av.+Am%C3%A9rico+Buaiz,+205,+Vit%C3%B3ria+ES"><i data-lucide="map" class="w-4 h-4"></i>Abrir no Maps</a>
+          </div>
+        </div>
+        <!-- ponto 3 -->
+        <div class="rounded-[26px] bg-white/60 border border-forest/10 p-5 sm:p-6 grid sm:grid-cols-[auto_1fr_auto] gap-5 items-center">
+          <div class="flex sm:flex-col items-center gap-3 sm:gap-1 sm:w-20">
+            <span class="font-serif text-6xl leading-none text-terra">3</span>
+            <span class="rounded-full bg-forest/10 text-forest text-[11px] font-bold px-2.5 py-1">Parada 3</span>
+          </div>
+          <div>
+            <div class="text-[11px] uppercase tracking-[.2em] text-forest/50 font-semibold">Cariacica • Último embarque</div>
+            <h3 class="font-serif text-3xl leading-tight">Posto Texas <span class="text-forest/50">(Rede Ipiranga)</span></h3>
+            <p class="text-[14px] text-forest/75 mt-1">Av. Mário Gurgel, 2847, Vera Cruz, Cariacica/ES</p>
+            <p class="text-[12px] text-forest/50 num mt-0.5">CEP 29146-785</p>
+          </div>
+          <div class="flex sm:flex-col gap-2">
+            <button class="copy flex-1 inline-flex items-center justify-center gap-2 rounded-full border border-forest/20 px-4 py-2.5 text-[13px] font-semibold hover:bg-forest hover:text-cream transition" data-copy="Av. Mário Gurgel, 2847, Vera Cruz, Cariacica/ES, CEP 29146-785" data-done="Copiado ✓"><i data-lucide="copy" class="w-4 h-4"></i><span>Copiar endereço</span></button>
+            <a class="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-forest text-cream px-4 py-2.5 text-[13px] font-semibold hover:bg-terra transition" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Av.+M%C3%A1rio+Gurgel,+2847,+Vera+Cruz,+Cariacica+ES+29146-785"><i data-lucide="map" class="w-4 h-4"></i>Abrir no Maps</a>
+          </div>
+        </div>
+        <!-- trajeto -->
+        <div class="rounded-[26px] border border-forest/10 p-5 dotline">
+          <div class="flex items-center justify-between gap-2 text-[12px] font-semibold">
+            <span class="rounded-full bg-cream px-3 py-1.5 border border-forest/15">1 • Jardim da Penha</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-terra shrink-0"></i>
+            <span class="rounded-full bg-cream px-3 py-1.5 border border-forest/15">2 • Enseada</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-terra shrink-0"></i>
+            <span class="rounded-full bg-cream px-3 py-1.5 border border-forest/15">3 • Cariacica</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-terra shrink-0 hidden sm:block"></i>
+            <span class="rounded-full bg-forest text-amber px-3 py-1.5 hidden sm:inline">Santa Teresa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PLAYLIST ================= -->
+<section id="playlist" class="relative bg-forest grain overflow-hidden">
+  <div class="absolute -right-40 top-10 w-[520px] h-[520px] rounded-full bg-terra/20 blur-3xl" aria-hidden="true"></div>
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 py-20 sm:py-28 relative z-10">
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-5 reveal">
+        <div class="flex items-center gap-3 text-[11px] tracking-[.24em] uppercase text-amber font-bold"><span class="w-8 h-px bg-amber"></span>04 • Trilha Sonora Oficial</div>
+        <h2 class="font-serif text-5xl sm:text-6xl leading-[.95] mt-5">A serra também<br><em class="text-amber">se sobe cantando.</em></h2>
+        <p class="mt-5 text-cream/70 text-[15px] leading-relaxed">112 músicas selecionadas a dedo para cada curva do caminho. Ouça antes, salve na sua conta e chegue sabendo as letras.</p>
+        <div class="mt-8 grid grid-cols-3 gap-2 text-center">
+          <div class="rounded-2xl border border-cream/10 py-4"><div class="font-serif text-4xl num">112</div><div class="text-[11px] text-cream/55 uppercase tracking-[.16em] mt-1">Faixas</div></div>
+          <div class="rounded-2xl border border-cream/10 py-4"><div class="font-serif text-4xl num">2.0</div><div class="text-[11px] text-cream/55 uppercase tracking-[.16em] mt-1">Versão</div></div>
+          <div class="rounded-2xl border border-cream/10 py-4"><div class="font-serif text-4xl num">1</div><div class="text-[11px] text-cream/55 uppercase tracking-[.16em] mt-1">Van</div></div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 reveal">
+        <div id="player" class="paused relative rounded-[32px] bg-gradient-to-br from-forest-3 to-forest-2 border border-cream/10 p-6 sm:p-8 shadow-[0_40px_80px_-40px_rgba(0,0,0,.7)]">
+          <div class="grid sm:grid-cols-[auto_1fr] gap-7 items-center">
+            <!-- vinil -->
+            <div class="relative mx-auto w-56 h-56 sm:w-64 sm:h-64">
+              <div class="spin absolute inset-0 rounded-full" style="background:repeating-radial-gradient(circle at center,#0b120d 0 2px,#151f18 2px 4px)">
+                <div class="absolute inset-[34%] rounded-full bg-gradient-to-br from-amber to-terra grid place-items-center">
+                  <div class="text-center text-forest leading-none"><div class="font-serif italic text-[15px]">Rota da</div><div class="text-[9px] font-extrabold tracking-[.2em] mt-0.5">FERRADURA</div></div>
+                </div>
+                <div class="absolute left-1/2 top-1/2 w-2.5 h-2.5 -ml-[5px] -mt-[5px] rounded-full bg-cream"></div>
+                <div class="absolute inset-0 rounded-full" style="background:conic-gradient(from 30deg, transparent 0 40deg, rgba(255,255,255,.08) 60deg, transparent 80deg 220deg, rgba(255,255,255,.06) 240deg, transparent 260deg)"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center gap-2 text-[11px] uppercase tracking-[.2em] text-cream/55"><span class="eq flex items-end gap-[3px] h-[18px]"><span></span><span></span><span></span><span></span><span></span></span>Playlist oficial • YouTube</div>
+              <h3 class="mt-3 font-sans font-extrabold text-3xl sm:text-4xl tracking-tight leading-none">ROTA DA<br>FERRADURA <span class="text-amber">2.0</span></h3>
+              <p class="mt-3 text-[13px] text-cream/60">112 músicas selecionadas para a viagem</p>
+              <!-- barra -->
+              <div class="mt-6">
+                <div class="h-1.5 rounded-full bg-cream/10 overflow-hidden"><div id="prog" class="h-full w-[18%] bg-amber rounded-full transition-all duration-700"></div></div>
+                <div class="mt-1.5 flex justify-between text-[11px] text-cream/50 num"><span id="trk">Faixa 001</span><span>de 112</span></div>
+              </div>
+              <div class="mt-5 flex items-center gap-3">
+                <button id="playBtn" class="grid place-items-center w-12 h-12 rounded-full bg-cream text-forest hover:scale-105 transition" aria-label="Animar vinil"><i data-lucide="play" class="w-5 h-5 ml-0.5"></i></button>
+                <a href="https://www.youtube.com/playlist?list=PLQ-yLZBQFf4F4ca-KnKbZvWOkioyVgM4q" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-terra hover:bg-terra-2 px-5 py-3.5 font-semibold text-[14px] transition"><i data-lucide="youtube" class="w-5 h-5"></i>Ouvir no YouTube<i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTAGEM ================= -->
+<section id="contagem" class="bg-cream text-forest relative overflow-hidden">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 py-20 sm:py-28">
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <div class="inline-flex items-center gap-3 text-[11px] tracking-[.24em] uppercase text-terra font-bold"><span class="w-8 h-px bg-terra"></span>05 • Contagem Regressiva<span class="w-8 h-px bg-terra"></span></div>
+      <h2 class="font-serif text-5xl sm:text-7xl leading-[.92] mt-5">Falta pouco para <em class="text-terra">subir a serra.</em></h2>
+      <p class="mt-5 text-forest/65 text-[15px]">Sábado, 12 de Dezembro de 2026, às 08:00:00 (horário de Brasília)</p>
+    </div>
+
+    <div class="mt-12 reveal relative rounded-[34px] p-[2px] bg-gradient-to-br from-amber via-terra to-amber">
+      <div class="rounded-[32px] bg-forest text-cream p-5 sm:p-10 relative overflow-hidden grain">
+        <div class="relative z-10">
+          <div class="cd-group grid grid-cols-4 gap-2 sm:gap-5">
+            <div class="rounded-3xl bg-cream/5 border border-cream/10 py-6 sm:py-10 text-center"><div class="tick font-serif text-5xl sm:text-[120px] num leading-none" data-u="d">00</div><div class="mt-3 text-[10px] sm:text-[12px] tracking-[.24em] uppercase text-cream/60">Dias</div></div>
+            <div class="rounded-3xl bg-cream/5 border border-cream/10 py-6 sm:py-10 text-center"><div class="tick font-serif text-5xl sm:text-[120px] num leading-none" data-u="h">00</div><div class="mt-3 text-[10px] sm:text-[12px] tracking-[.24em] uppercase text-cream/60">Horas</div></div>
+            <div class="rounded-3xl bg-cream/5 border border-cream/10 py-6 sm:py-10 text-center"><div class="tick font-serif text-5xl sm:text-[120px] num leading-none" data-u="m">00</div><div class="mt-3 text-[10px] sm:text-[12px] tracking-[.24em] uppercase text-cream/60">Minutos</div></div>
+            <div class="rounded-3xl bg-amber text-forest py-6 sm:py-10 text-center"><div class="tick font-serif text-5xl sm:text-[120px] num leading-none" data-u="s">00</div><div class="mt-3 text-[10px] sm:text-[12px] tracking-[.24em] uppercase text-forest/70">Segundos</div></div>
+          </div>
+          <div class="cd-done hidden text-center font-serif italic text-4xl py-10">A van já está na estrada. Boa viagem!</div>
+          <div class="mt-8">
+            <div class="flex justify-between text-[11px] uppercase tracking-[.2em] text-cream/50"><span>Hoje</span><span>Embarque</span></div>
+            <div class="mt-2 h-2 rounded-full bg-cream/10 overflow-hidden"><div id="cdBar" class="h-full bg-gradient-to-r from-terra to-amber rounded-full" style="width:0%"></div></div>
+            <div id="cdBarTxt" class="mt-2 text-[12px] text-cream/55 num text-right"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- informações gerais -->
+    <div class="mt-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 reveal">
+      <div class="rounded-3xl border border-forest/10 bg-white/60 p-5"><i data-lucide="bus" class="w-5 h-5 text-terra"></i><div class="mt-3 font-semibold text-[14px]">Transporte ida e volta</div><p class="text-[13px] text-forest/65 mt-1">Van saindo da Grande Vitória, com 3 pontos de embarque.</p></div>
+      <div class="rounded-3xl border border-forest/10 bg-white/60 p-5"><i data-lucide="receipt" class="w-5 h-5 text-terra"></i><div class="mt-3 font-semibold text-[14px]">Consumação à parte</div><p class="text-[13px] text-forest/65 mt-1">Café, almoço, cervejas e petiscos são pagos direto em cada local.</p></div>
+      <div class="rounded-3xl border border-forest/10 bg-white/60 p-5"><i data-lucide="alarm-clock" class="w-5 h-5 text-terra"></i><div class="mt-3 font-semibold text-[14px]">Chegue 10 min antes</div><p class="text-[13px] text-forest/65 mt-1">A van segue o roteiro e não espera atrasos no embarque.</p></div>
+      <div class="rounded-3xl border border-forest/10 bg-white/60 p-5"><i data-lucide="message-circle" class="w-5 h-5 text-terra"></i><div class="mt-3 font-semibold text-[14px]">Avisos no grupo oficial</div><p class="text-[13px] text-forest/65 mt-1">Qualquer mudança de horário é comunicada no grupo do passeio.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-forest relative grain overflow-hidden">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 pt-20 pb-8 relative z-10">
+    <div class="grid lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-6">
+        <div class="font-serif text-[64px] sm:text-[110px] leading-[.85]">12<span class="text-amber">.</span>12<span class="text-amber">.</span>2026</div>
+        <p class="mt-4 text-cream/65 text-[14px]">Sábado • Saída às 08h00 • Bate-volta Vitória ⇄ Santa Teresa/ES</p>
+        <a href="#roteiro" class="mt-7 inline-flex items-center gap-2 rounded-full bg-amber text-forest font-bold text-[14px] px-6 py-3.5 hover:bg-amber-2 transition">Ver o roteiro<i data-lucide="arrow-up" class="w-4 h-4"></i></a>
+      </div>
+      <div class="lg:col-span-3">
+        <div class="text-[11px] uppercase tracking-[.22em] text-cream/45 font-semibold">Parceiros no Instagram</div>
+        <ul class="mt-4 space-y-2.5 text-[14px]">
+          <li><a class="hover:text-amber flex items-center gap-2" href="https://instagram.com/fioritacafejardim" target="_blank" rel="noopener"><i data-lucide="instagram" class="w-3.5 h-3.5 text-amber"></i>@fioritacafejardim</a></li>
+          <li><a class="hover:text-amber flex items-center gap-2" href="https://instagram.com/vinciaoficialsantateresa" target="_blank" rel="noopener"><i data-lucide="instagram" class="w-3.5 h-3.5 text-amber"></i>@vinciaoficialsantateresa</a></li>
+          <li><a class="hover:text-amber flex items-center gap-2" href="https://instagram.com/cervejariatressantas" target="_blank" rel="noopener"><i data-lucide="instagram" class="w-3.5 h-3.5 text-amber"></i>@cervejariatressantas</a></li>
+          <li><a class="hover:text-amber flex items-center gap-2" href="https://instagram.com/villaggiozamprogno" target="_blank" rel="noopener"><i data-lucide="instagram" class="w-3.5 h-3.5 text-amber"></i>@villaggiozamprogno</a></li>
+          <li><a class="hover:text-amber flex items-center gap-2" href="https://instagram.com/wosantateresa" target="_blank" rel="noopener"><i data-lucide="instagram" class="w-3.5 h-3.5 text-amber"></i>@wosantateresa</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <div class="text-[11px] uppercase tracking-[.22em] text-cream/45 font-semibold">Navegar</div>
+        <ul class="mt-4 space-y-2.5 text-[14px] text-cream/80">
+          <li><a class="hover:text-amber" href="#roteiro">O Roteiro</a></li>
+          <li><a class="hover:text-amber" href="#embarques">Embarques</a></li>
+          <li><a class="hover:text-amber" href="#playlist">Playlist</a></li>
+          <li><a class="hover:text-amber" href="#contagem">Contagem regressiva</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-16 pt-6 border-t border-cream/10 flex flex-col sm:flex-row justify-between gap-3 text-[11px] tracking-[.2em] uppercase text-cream/45">
+      <span>Rota Caravaggio <span class="text-amber">•</span> Santa Teresa/ES</span>
+      <span>Terra dos Colibris <span class="text-amber">•</span> Beba com moderação</span>
+    </div>
+  </div>
+  <div class="font-serif italic text-[22vw] leading-[.7] text-cream/[.04] whitespace-nowrap -mb-[3vw] select-none" aria-hidden="true">Caravaggio</div>
+</footer>
+
+<!-- toast -->
+<div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-[60] rounded-full bg-forest text-cream border border-amber/40 px-5 py-3 text-[13px] font-semibold shadow-2xl opacity-0 translate-y-4 pointer-events-none transition-all duration-300 flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber"></i><span>Copiado</span></div>
+
+<!-- contador fixo mobile -->
+<a id="mobileCta" href="#contagem" class="lg:hidden fixed inset-x-4 z-40 rounded-full glass-dark text-cream text-[13px] py-3 px-5 flex items-center justify-between shadow-2xl opacity-0 invisible translate-y-6 transition-all duration-500 num" style="bottom:calc(env(safe-area-inset-bottom) + 16px)"><span class="flex items-center gap-2 text-cream/70"><i data-lucide="timer" class="w-4 h-4 text-amber"></i>Embarque em</span><span class="font-semibold"><span data-u="d">00</span>d <span data-u="h">00</span>h <span data-u="m">00</span>m <span class="text-amber" data-u="s">00</span>s</span></a>
+
+<script>
+(function(){
+  if (window.lucide) lucide.createIcons();
+
+  /* ---------- Countdown: 12/12/2026 08:00:00 BRT (UTC-3) ---------- */
+  const target = Date.parse('2026-12-12T08:00:00-03:00');
+  const start = Date.parse('2026-11-16T00:00:00-03:00');
+  const units = [...document.querySelectorAll('[data-u]')];
+  const bar = document.getElementById('cdBar'), barTxt = document.getElementById('cdBarTxt');
+  const pad = (n, l=2) => String(n).padStart(l, '0');
+  let last = {}, timer;
+  function tick(){
+    const diff = target - Date.now();
+    if (diff <= 0){
+      document.querySelectorAll('.cd-group').forEach(g => g.classList.add('hidden'));
+      document.querySelectorAll('.cd-done').forEach(g => g.classList.remove('hidden'));
+      document.getElementById('mobileCta').classList.add('hidden');
+      bar.style.width = '100%'; barTxt.textContent = 'Chegou o dia!'; clearInterval(timer); return;
+    }
+    const s = Math.floor(diff/1000);
+    const v = { d: pad(Math.floor(s/86400)), h: pad(Math.floor(s%86400/3600)), m: pad(Math.floor(s%3600/60)), s: pad(s%60) };
+    units.forEach(el => {
+      const k = el.dataset.u; if (last[k] === v[k]) return;
+      el.textContent = v[k];
+      if (el.classList.contains('tick')){ el.classList.add('flip'); setTimeout(()=>el.classList.remove('flip'), 180); }
+    });
+    last = v;
+    const pct = Math.min(100, Math.max(0, (Date.now() - start) / (target - start) * 100));
+    bar.style.width = pct.toFixed(2) + '%';
+    barTxt.textContent = pct.toFixed(1).replace('.', ',') + '% do caminho até o embarque';
+  }
+  tick(); timer = setInterval(tick, 1000);
+
+  /* ---------- Parallax (desligado em mobile e reduced-motion) ---------- */
+  const layers = [...document.querySelectorAll('#topo .layer')];
+  const mq = window.matchMedia('(min-width: 768px) and (prefers-reduced-motion: no-preference)');
+  let ticking = false;
+  function para(){
+    const y = window.scrollY;
+    if (mq.matches && y < window.innerHeight * 1.2){
+      layers.forEach(l => l.style.transform = 'translate3d(0,' + (y * parseFloat(l.dataset.speed)) + 'px,0)');
+    } else if (!mq.matches) layers.forEach(l => l.style.transform = '');
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => { if (!ticking){ requestAnimationFrame(para); ticking = true; } }, { passive: true });
+  mq.addEventListener ? mq.addEventListener('change', para) : null;
+
+  /* ---------- Navbar compacta + CTA mobile ---------- */
+  const nav = document.getElementById('nav'), cta = document.getElementById('mobileCta'), vaga = document.getElementById('contagem');
+  function onScroll(){
+    nav.style.top = window.scrollY > 40 ? '8px' : '';
+    const vr = vaga.getBoundingClientRect();
+    const show = window.scrollY > window.innerHeight * .8 && !(vr.top < window.innerHeight && vr.bottom > 0);
+    cta.classList.toggle('opacity-0', !show); cta.classList.toggle('invisible', !show); cta.classList.toggle('translate-y-6', !show);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  /* ---------- Menu mobile ---------- */
+  const menu = document.getElementById('menu');
+  document.getElementById('menuBtn').addEventListener('click', () => menu.classList.toggle('hidden'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+
+  /* ---------- Reveal ---------- */
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  /* ---------- Filtro do roteiro ---------- */
+  const tabs = document.querySelectorAll('#tabs .tab');
+  tabs.forEach(t => t.addEventListener('click', () => {
+    tabs.forEach(x => { x.className = 'tab px-4 py-2 rounded-full border border-cream/20 text-cream/75'; });
+    t.className = 'tab px-4 py-2 rounded-full bg-cream text-forest font-semibold';
+    document.querySelectorAll('.step').forEach(s => { s.style.display = (t.dataset.t === 'all' || s.dataset.p === t.dataset.t) ? '' : 'none'; });
+  }));
+
+  /* ---------- Copiar endereços ---------- */
+  const toast = document.getElementById('toast');
+  function showToast(msg){ toast.querySelector('span').textContent = msg; toast.style.opacity = 1; toast.style.transform = 'translate(-50%,0)'; clearTimeout(showToast.t); showToast.t = setTimeout(()=>{ toast.style.opacity = 0; toast.style.transform = ''; }, 2200); }
+  async function copyText(txt){
+    try { await navigator.clipboard.writeText(txt); return true; }
+    catch(e){
+      try { const ta = document.createElement('textarea'); ta.value = txt; ta.setAttribute('readonly',''); ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); const ok = document.execCommand('copy'); ta.remove(); return ok; }
+      catch(_) { return false; }
+    }
+  }
+  document.querySelectorAll('[data-copy]').forEach(btn => {
+    const label = btn.querySelector('span'), orig = label.textContent;
+    btn.addEventListener('click', async () => {
+      const ok = await copyText(btn.dataset.copy);
+      if (ok){
+        label.textContent = btn.dataset.done;
+        btn.classList.add('ring-2','ring-amber');
+        showToast('Endereço copiado');
+        setTimeout(() => { label.textContent = orig; btn.classList.remove('ring-2','ring-amber'); }, 3500);
+      } else {
+        showToast('Não foi possível copiar. Selecione o texto manualmente.');
+      }
+    });
+  });
+
+  /* ---------- Player (vinil) ---------- */
+  const player = document.getElementById('player'), playBtn = document.getElementById('playBtn'), prog = document.getElementById('prog'), trk = document.getElementById('trk');
+  let t = 1, iv = null;
+  playBtn.addEventListener('click', () => {
+    const playing = player.classList.toggle('paused') === false;
+    playBtn.innerHTML = playing ? '<i data-lucide="pause" class="w-5 h-5"></i>' : '<i data-lucide="play" class="w-5 h-5 ml-0.5"></i>';
+    if (window.lucide) lucide.createIcons();
+    clearInterval(iv);
+    if (playing) iv = setInterval(() => { t = t % 112 + 1; trk.textContent = 'Faixa ' + pad(t,3); prog.style.width = (t/112*100) + '%'; }, 1600);
+  });
+})();
+</script>
+</body>
+</html>
